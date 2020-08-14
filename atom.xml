@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Greenplumte4的小屋</title>
+  
+  <subtitle>Greenplumte4</subtitle>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-08-14T10:04:04.919Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Greenplumte4</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BUU刷题第二弹</title>
+    <link href="http://yoursite.com/2020/08/13/buu-shua-ti-di-er-dan/"/>
+    <id>http://yoursite.com/2020/08/13/buu-shua-ti-di-er-dan/</id>
+    <published>2020-08-13T05:14:54.000Z</published>
+    <updated>2020-08-14T10:04:04.919Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;网鼎杯-2018-Fakebook&quot;&gt;&lt;a href=&quot;#网鼎杯-2018-Fakebook&quot; class=&quot;headerlink&quot; title=&quot;[网鼎杯 2018]Fakebook&quot;&gt;&lt;/a&gt;[网鼎杯 2018]Fakebook&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ctf-web源码泄露方式总结</title>
+    <link href="http://yoursite.com/2020/08/03/ctf-web-yuan-ma-xie-lu-fang-shi-zong-jie/"/>
+    <id>http://yoursite.com/2020/08/03/ctf-web-yuan-ma-xie-lu-fang-shi-zong-jie/</id>
+    <published>2020-08-03T02:26:37.000Z</published>
+    <updated>2020-08-13T04:21:07.193Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>buuoj刷题大作战</title>
+    <link href="http://yoursite.com/2020/07/27/buuoj-gxyctf2019-ping-ping-ping/"/>
+    <id>http://yoursite.com/2020/07/27/buuoj-gxyctf2019-ping-ping-ping/</id>
+    <published>2020-07-27T02:29:29.000Z</published>
+    <updated>2020-08-13T10:01:14.703Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;GXYCTF2019-Ping-Ping-Ping&quot;&gt;&lt;a href=&quot;#GXYCTF2019-Ping-Ping-Ping&quot; class=&quot;headerlink&quot; title=&quot;[GXYCTF2019]Ping Ping Ping&quot;&gt;&lt;/a&gt;[GXYCTF2019]Ping Ping Ping&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;最近回归CTF，但是PTA也是会继续更新，加油冲！&lt;/p&gt;
+&lt;p&gt;这两天断更的原因是跟小伙伴们一起去打了CyberCTF，菜鸡的团队也能打进60，真的是很高兴了，虽然是几个小伙伴一起组建的hhh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;考点&quot;&gt;&lt;a href=&quot;#考点&quot; class=&quot;headerlink&quot; title=&quot;考点&quot;&gt;&lt;/a&gt;考点&lt;/h2&gt;&lt;p&gt;基础之管道命令&lt;/p&gt;
+&lt;p&gt;1.命令执行—变量拼接&lt;/p&gt;
+&lt;p&gt;2.内联执行–反引号的作用&lt;/p&gt;
+&lt;h2 id=&quot;解题&quot;&gt;&lt;a href=&quot;#解题&quot; class=&quot;headerlink&quot; title=&quot;解题&quot;&gt;&lt;/a&gt;解题&lt;/h2&gt;&lt;p&gt;先一看题，是ping ip的&lt;/p&gt;
+&lt;p&gt;跟之前的比赛类似&lt;/p&gt;
+&lt;p&gt;直接看里面有啥&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;?127.0.0.1|ls&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用管道命令&lt;/p&gt;
+&lt;p&gt;发现里面有两个文档&lt;/p&gt;
+&lt;p&gt;一个flag.php，一个index.php&lt;/p&gt;
+&lt;p&gt;试着继续用管道命令cat flag.php&lt;/p&gt;
+&lt;p&gt;接着就回显&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/?ip= fxck your space!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;告知我空格被ban了&lt;/p&gt;
+&lt;p&gt;但是这粗暴的语言恶心到我了（就是玻璃心）&lt;/p&gt;
+&lt;p&gt;努力干掉这道题&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT甲级1006</title>
+    <link href="http://yoursite.com/2020/07/24/pat-jia-ji-1006/"/>
+    <id>http://yoursite.com/2020/07/24/pat-jia-ji-1006/</id>
+    <published>2020-07-24T07:26:22.000Z</published>
+    <updated>2020-07-24T11:37:09.115Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;太真实了，这道题估计是我自己写的最 舒服的一道题了吧，555&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1006-Sign-In-and-Sign-Out-25分&quot;&gt;&lt;a href=&quot;#1006-Sign-In-and-Sign-Out-25分&quot; class=&quot;headerlink&quot; title=&quot;1006 Sign In and Sign Out (25分)&quot;&gt;&lt;/a&gt;1006 Sign In and Sign Out (25分)&lt;/h1&gt;&lt;p&gt;At the beginning of every day, the first person who signs in the computer room will unlock the door, and the last one who signs out will lock the door. Given the records of signing in’s and out’s, you are supposed to find the ones who have unlocked and locked the door on that day.&lt;/p&gt;
+&lt;h3 id=&quot;Input-Specification&quot;&gt;&lt;a href=&quot;#Input-Specification&quot; class=&quot;headerlink&quot; title=&quot;Input Specification:&quot;&gt;&lt;/a&gt;Input Specification:&lt;/h3&gt;&lt;p&gt;Each input file contains one test case. Each case contains the records for one day. The case starts with a positive integer &lt;em&gt;M&lt;/em&gt;, which is the total number of records, followed by &lt;em&gt;M&lt;/em&gt; lines, each in the format:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ID_number Sign_in_time Sign_out_time&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where times are given in the format &lt;code&gt;HH:MM:SS&lt;/code&gt;, and &lt;code&gt;ID_number&lt;/code&gt; is a string with no more than 15 characters.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT甲级1005</title>
+    <link href="http://yoursite.com/2020/07/23/pat-jia-ji-1005/"/>
+    <id>http://yoursite.com/2020/07/23/pat-jia-ji-1005/</id>
+    <published>2020-07-23T13:38:37.000Z</published>
+    <updated>2020-07-23T15:01:24.610Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;先发第五题，第三题做出来了，还在写分析，加油哦！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1005-Spell-It-Right-20分&quot;&gt;&lt;a href=&quot;#1005-Spell-It-Right-20分&quot; class=&quot;headerlink&quot; title=&quot;1005 Spell It Right (20分)&quot;&gt;&lt;/a&gt;1005 Spell It Right (20分)&lt;/h1&gt;&lt;p&gt;Given a non-negative integer &lt;em&gt;N&lt;/em&gt;, your task is to compute the sum of all the digits of &lt;em&gt;N&lt;/em&gt;, and output every digit of the sum in English.&lt;/p&gt;
+&lt;h3 id=&quot;Input-Specification&quot;&gt;&lt;a href=&quot;#Input-Specification&quot; class=&quot;headerlink&quot; title=&quot;Input Specification:&quot;&gt;&lt;/a&gt;Input Specification:&lt;/h3&gt;&lt;p&gt;Each input file contains one test case. Each case occupies one line which contains an &lt;em&gt;N&lt;/em&gt; (≤10100).&lt;/p&gt;
+&lt;h3 id=&quot;Output-Specification&quot;&gt;&lt;a href=&quot;#Output-Specification&quot; class=&quot;headerlink&quot; title=&quot;Output Specification:&quot;&gt;&lt;/a&gt;Output Specification:&lt;/h3&gt;&lt;p&gt;For each test case, output in one line the digits of the sum in English words. There must be one space between two consecutive words, but no extra space at the end of a line.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT甲级1003</title>
+    <link href="http://yoursite.com/2020/07/17/pat-jia-ji-1003/"/>
+    <id>http://yoursite.com/2020/07/17/pat-jia-ji-1003/</id>
+    <published>2020-07-17T03:14:47.000Z</published>
+    <updated>2020-07-23T15:01:16.309Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;刷题第三弹，自己努力搞定吧，别到时候丢人啊！&lt;/p&gt;
+&lt;p&gt;虽然说现在更新的是PAT，但后面会陆陆续续地更新CTF的东西&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1003-Emergency-25分&quot;&gt;&lt;a href=&quot;#1003-Emergency-25分&quot; class=&quot;headerlink&quot; title=&quot;1003 Emergency (25分)&quot;&gt;&lt;/a&gt;&lt;strong&gt;1003&lt;/strong&gt; &lt;strong&gt;Emergency&lt;/strong&gt; (25分)&lt;/h1&gt;&lt;p&gt;As an emergency rescue team leader of a city, you are given a special map of your country. The map shows several scattered cities connected by some roads. Amount of rescue teams in each city and the length of each road between any pair of cities are marked on the map. When there is an emergency call to you from some other city, your job is to lead your men to the place as quickly as possible, and at the mean time, call up as many hands on the way as possible.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT甲级1002</title>
+    <link href="http://yoursite.com/2020/07/17/pat-jia-ji-1002/"/>
+    <id>http://yoursite.com/2020/07/17/pat-jia-ji-1002/</id>
+    <published>2020-07-17T02:47:06.000Z</published>
+    <updated>2020-07-17T03:10:30.046Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;自闭了，网课刚结束然后还有CTF的培训，只能自己加大训练量，这次试水也要自己努力啊！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1002-A-B-for-Polynomials-25分&quot;&gt;&lt;a href=&quot;#1002-A-B-for-Polynomials-25分&quot; class=&quot;headerlink&quot; title=&quot;1002 **A+B **for Polynomials (25分)&quot;&gt;&lt;/a&gt;&lt;strong&gt;1002&lt;/strong&gt; **A+B **for Polynomials (25分)&lt;/h1&gt;&lt;p&gt;This time, you are supposed to find &lt;em&gt;A&lt;/em&gt;+&lt;em&gt;B&lt;/em&gt; where &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; are two polynomials.&lt;/p&gt;
+&lt;h3 id=&quot;Input-Specification&quot;&gt;&lt;a href=&quot;#Input-Specification&quot; class=&quot;headerlink&quot; title=&quot;Input Specification:&quot;&gt;&lt;/a&gt;Input Specification:&lt;/h3&gt;&lt;p&gt;Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;K&lt;/em&gt; &lt;em&gt;N&lt;/em&gt;1 &lt;em&gt;a**N&lt;/em&gt;1 &lt;em&gt;N&lt;/em&gt;2 &lt;em&gt;a**N&lt;/em&gt;2 … &lt;em&gt;N**K&lt;/em&gt; &lt;em&gt;a&lt;strong&gt;N&lt;/strong&gt;K&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;em&gt;K&lt;/em&gt; is the number of nonzero terms in the polynomial, &lt;em&gt;N**i&lt;/em&gt; and &lt;em&gt;a&lt;strong&gt;N&lt;/strong&gt;i&lt;/em&gt; (&lt;em&gt;i&lt;/em&gt;=1,2,⋯,&lt;em&gt;K&lt;/em&gt;) are the exponents and coefficients, respectively. It is given that 1≤&lt;em&gt;K&lt;/em&gt;≤10，0≤&lt;em&gt;N**K&lt;/em&gt;&amp;lt;⋯&amp;lt;&lt;em&gt;N&lt;/em&gt;2&amp;lt;&lt;em&gt;N&lt;/em&gt;1≤1000.&lt;/p&gt;
+&lt;h3 id=&quot;Output-Specification&quot;&gt;&lt;a href=&quot;#Output-Specification&quot; class=&quot;headerlink&quot; title=&quot;Output Specification:&quot;&gt;&lt;/a&gt;Output Specification:&lt;/h3&gt;&lt;p&gt;For each test case you should output the sum of &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate to 1 decimal place.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT甲级1001</title>
+    <link href="http://yoursite.com/2020/06/18/pat-jia-ji-1001/"/>
+    <id>http://yoursite.com/2020/06/18/pat-jia-ji-1001/</id>
+    <published>2020-06-18T13:33:49.000Z</published>
+    <updated>2020-06-18T14:24:44.732Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前言：菜鸡被大佬怂恿的准备去七月考一次，所以决定每天一道题，争取不爆0，然后现在还要继续打ctf，所以只能就这样吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1001-A-B-Format-20分&quot;&gt;&lt;a href=&quot;#1001-A-B-Format-20分&quot; class=&quot;headerlink&quot; title=&quot;1001 A+B Format (20分)&quot;&gt;&lt;/a&gt;&lt;strong&gt;1001&lt;/strong&gt; &lt;strong&gt;A+B Format&lt;/strong&gt; (20分)&lt;/h1&gt;&lt;p&gt;Calculate &lt;em&gt;a&lt;/em&gt;+&lt;em&gt;b&lt;/em&gt; and output the sum in standard format – that is, the digits must be separated into groups of three by commas (unless there are less than four digits).&lt;/p&gt;
+&lt;h3 id=&quot;Input-Specification&quot;&gt;&lt;a href=&quot;#Input-Specification&quot; class=&quot;headerlink&quot; title=&quot;Input Specification:&quot;&gt;&lt;/a&gt;Input Specification:&lt;/h3&gt;&lt;p&gt;Each input file contains one test case. Each case contains a pair of integers &lt;em&gt;a&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt; where −10^6≤&lt;em&gt;a&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;≤10^6. The numbers are separated by a space.&lt;/p&gt;
+&lt;h3 id=&quot;Output-Specification&quot;&gt;&lt;a href=&quot;#Output-Specification&quot; class=&quot;headerlink&quot; title=&quot;Output Specification:&quot;&gt;&lt;/a&gt;Output Specification:&lt;/h3&gt;&lt;p&gt;For each test case, you should output the sum of &lt;em&gt;a&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt; in one line. The sum must be written in the standard format.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://yoursite.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器上搭一个LAMP环境</title>
+    <link href="http://yoursite.com/2020/06/06/fu-wu-qi-shang-da-yi-ge-lamp-huan-jing/"/>
+    <id>http://yoursite.com/2020/06/06/fu-wu-qi-shang-da-yi-ge-lamp-huan-jing/</id>
+    <published>2020-06-06T04:56:17.000Z</published>
+    <updated>2020-07-17T08:19:05.764Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;之前那台服务器为了准备二招用的，于是现在重新用回自己的学生服务器&lt;/p&gt;
+&lt;p&gt;每次都要去网上查，直接自己写个博客记录下来吧，防止踩坑，然后避免那些博客突然消失&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;一台新的服务器（我这次用的服务器是华为云的学生机）&lt;/p&gt;
+&lt;p&gt;LAMP环境：Linux+Apache+Mysql+PHP&lt;/p&gt;
+&lt;h2 id=&quot;过程&quot;&gt;&lt;a href=&quot;#过程&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h2&gt;&lt;h3 id=&quot;一-安装Mysql&quot;&gt;&lt;a href=&quot;#一-安装Mysql&quot; class=&quot;headerlink&quot; title=&quot;一.安装Mysql&quot;&gt;&lt;/a&gt;一.安装Mysql&lt;/h3&gt;&lt;p&gt;连上云服务器&lt;/p&gt;
+&lt;p&gt;1.授予管理员权限&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo su&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.安装mysql&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get install mysql-server  
+
+
+
+apt-get install mysql-client  
+
+
+
+apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;均同意即可&lt;/p&gt;
+&lt;p&gt;3.安装net-tools&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt install net-tools&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4.检测是否安装成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo netstat -tap | grep mysql&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;若处于listen状态则表示安装成功&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭题" scheme="http://yoursite.com/categories/%E6%90%AD%E9%A2%98/"/>
+    
+    
+    <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HFCTF2020（web）-Easylogin</title>
+    <link href="http://yoursite.com/2020/05/28/hfctf2020-web-easylogin/"/>
+    <id>http://yoursite.com/2020/05/28/hfctf2020-web-easylogin/</id>
+    <published>2020-05-28T05:38:20.000Z</published>
+    <updated>2020-08-03T02:51:53.285Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;终于重新搭好了博客，惊喜万分，虽然说搭了好久，但搭的越多次，速度就越快&lt;/p&gt;
+&lt;p&gt;和我一起加油吧！&lt;/p&gt;
+&lt;p&gt;本题为复现题，在虎符那场比赛里没出来几题，我果然是太菜了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;考点：&quot;&gt;&lt;a href=&quot;#考点：&quot; class=&quot;headerlink&quot; title=&quot;考点：&quot;&gt;&lt;/a&gt;考点：&lt;/h3&gt;&lt;p&gt;Node.js代码审计&lt;/p&gt;
+&lt;p&gt;Node.js弱类型比较&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HFCTF-Web" scheme="http://yoursite.com/categories/HFCTF-Web/"/>
+    
+    
+    <category term="HFCTF-Web" scheme="http://yoursite.com/tags/HFCTF-Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭题</title>
+    <link href="http://yoursite.com/2020/05/23/da-ti/"/>
+    <id>http://yoursite.com/2020/05/23/da-ti/</id>
+    <published>2020-05-23T12:18:47.000Z</published>
+    <updated>2020-06-08T03:28:59.244Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近真的是特别惨，一边出题一边打比赛，而且最近实验室招新，还是记录一下比较好，防止后面忘记了&lt;/p&gt;
+&lt;h2 id=&quot;docker&quot;&gt;&lt;a href=&quot;#docker&quot; class=&quot;headerlink&quot; title=&quot;docker&quot;&gt;&lt;/a&gt;docker&lt;/h2&gt;&lt;p&gt;关于docker的话：参考实验室的&lt;a href=&quot;https://xi4or0uji.github.io/2019/02/19/%E7%94%A8docker%E6%90%AD%E4%B8%AActf%E9%A2%98%E7%9B%AE/&quot;&gt;肉鸡大佬的博客&lt;/a&gt;弄的：&lt;/p&gt;
+&lt;p&gt;言归正传，docker可以理解成在服务器上的虚拟机，里面的容器互不干扰，然后不容易相互窜。&lt;/p&gt;
+&lt;p&gt;First 找lamp环境&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker search lamp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Second 拉镜像（此处用的是tutum的lamp）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker pull tutum/lamp&lt;/code&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭题" scheme="http://yoursite.com/categories/%E6%90%AD%E9%A2%98/"/>
+    
+    
+    <category term="搭题" scheme="http://yoursite.com/tags/%E6%90%AD%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CenteOS 零基础安装 PHP + MySQL</title>
+    <link href="http://yoursite.com/2020/02/16/centeos-ling-ji-chu-an-zhuang-php-mysql/"/>
+    <id>http://yoursite.com/2020/02/16/centeos-ling-ji-chu-an-zhuang-php-mysql/</id>
+    <published>2020-02-15T17:10:02.000Z</published>
+    <updated>2020-02-15T18:00:07.330Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;快速搭建-PHP-MySQL&quot;&gt;&lt;a href=&quot;#快速搭建-PHP-MySQL&quot; class=&quot;headerlink&quot; title=&quot;快速搭建 PHP + MySQL&quot;&gt;&lt;/a&gt;快速搭建 PHP +</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Jarvis web 持续更新</title>
+    <link href="http://yoursite.com/2019/11/12/jarvis-web-chi-xu-geng-xin/"/>
+    <id>http://yoursite.com/2019/11/12/jarvis-web-chi-xu-geng-xin/</id>
+    <published>2019-11-12T11:25:30.000Z</published>
+    <updated>2020-08-14T10:04:20.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;PORT-51&quot;&gt;&lt;a href=&quot;#PORT-51&quot; class=&quot;headerlink&quot; title=&quot;PORT 51&quot;&gt;&lt;/a&gt;PORT 51&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;直接在虚拟机上用curl +URL +</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>出misc题的一些总结</title>
+    <link href="http://yoursite.com/2019/11/12/chu-misc-ti-de-yi-xie-zong-jie/"/>
+    <id>http://yoursite.com/2019/11/12/chu-misc-ti-de-yi-xie-zong-jie/</id>
+    <published>2019-11-11T16:20:47.000Z</published>
+    <updated>2020-08-14T10:04:29.558Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先用zip进行压缩，zip与rar格式的压缩有很大的不同&lt;/p&gt;
+&lt;p&gt;主要是zip压缩的量比rar多多了&lt;/p&gt;
+&lt;p&gt;接下来主要是怎么将文件藏入图片中呢?&lt;/p&gt;
+&lt;p&gt; 新建一个文本文件（txt），然后打开，写入代码“copy/b</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-MISC" scheme="http://yoursite.com/categories/CTF-MISC/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作业题wp</title>
+    <link href="http://yoursite.com/2019/11/02/zuo-ye-ti-wp/"/>
+    <id>http://yoursite.com/2019/11/02/zuo-ye-ti-wp/</id>
+    <published>2019-11-02T15:45:20.000Z</published>
+    <updated>2020-08-14T10:04:40.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;最后一次作业wp&quot;&gt;&lt;a href=&quot;#最后一次作业wp&quot; class=&quot;headerlink&quot; title=&quot;最后一次作业wp&quot;&gt;&lt;/a&gt;最后一次作业wp&lt;/h1&gt;&lt;h2 id=&quot;WEB&quot;&gt;&lt;a href=&quot;#WEB&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>攻防世界的几道小题</title>
+    <link href="http://yoursite.com/2019/10/15/gong-fang-shi-jie-de-ji-dao-xiao-ti/"/>
+    <id>http://yoursite.com/2019/10/15/gong-fang-shi-jie-de-ji-dao-xiao-ti/</id>
+    <published>2019-10-14T23:24:44.000Z</published>
+    <updated>2019-10-31T00:36:53.112Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【write-up】攻防世界的几道小题&quot;&gt;&lt;a href=&quot;#【write-up】攻防世界的几道小题&quot; class=&quot;headerlink&quot; title=&quot;【write up】攻防世界的几道小题&quot;&gt;&lt;/a&gt;【write</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【write up】攻防世界-Web-ics-05</title>
+    <link href="http://yoursite.com/2019/10/11/write-up-gong-fang-shi-jie-web-ics-05/"/>
+    <id>http://yoursite.com/2019/10/11/write-up-gong-fang-shi-jie-web-ics-05/</id>
+    <published>2019-10-11T01:09:58.000Z</published>
+    <updated>2020-08-14T10:04:46.951Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【write-up】攻防世界-Web-ics-05&quot;&gt;&lt;a href=&quot;#【write-up】攻防世界-Web-ics-05&quot; class=&quot;headerlink&quot; title=&quot;【write up】攻防世界-Web-ics-05&quot;&gt;&lt;/a&gt;【write</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UBUNTU搭Django</title>
+    <link href="http://yoursite.com/2019/10/09/ubuntu-da-django/"/>
+    <id>http://yoursite.com/2019/10/09/ubuntu-da-django/</id>
+    <published>2019-10-09T14:11:03.000Z</published>
+    <updated>2019-10-10T07:48:39.446Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;云服务器Ubuntu系统上搭Django&quot;&gt;&lt;a href=&quot;#云服务器Ubuntu系统上搭Django&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【write up】buuoj 之 随便注（2019强网杯复现）引入堆叠注入</title>
+    <link href="http://yoursite.com/2019/09/27/write-up-buuoj-zhi-sui-bian-zhu-2019-qiang-wang-bei-fu-xian-yin-ru-dui-die-zhu-ru/"/>
+    <id>http://yoursite.com/2019/09/27/write-up-buuoj-zhi-sui-bian-zhu-2019-qiang-wang-bei-fu-xian-yin-ru-dui-die-zhu-ru/</id>
+    <published>2019-09-27T04:53:56.000Z</published>
+    <updated>2020-08-14T10:03:52.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近觉得自己还是要搞定强网杯的随便注这道题（太难了…数字经济上还有魔改题）&lt;/p&gt;
+&lt;h2 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h2&gt;&lt;p&gt;知道有个东西叫 SQL的堆叠注入&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="http://yoursite.com/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XCTF中一道misc题让我明白伪加密修改</title>
+    <link href="http://yoursite.com/2019/08/31/xctf-zhong-yi-dao-misc-ti-rang-wo-ming-bai-wei-jia-mi-xiu-gai/"/>
+    <id>http://yoursite.com/2019/08/31/xctf-zhong-yi-dao-misc-ti-rang-wo-ming-bai-wei-jia-mi-xiu-gai/</id>
+    <published>2019-08-31T02:05:44.000Z</published>
+    <updated>2019-08-31T04:54:53.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;XCTF中的zip文件的伪加密实在是让我遇到了很多次，这次决定趁着这次机会还是要好好的搞懂这个遇到了好多次掉坑的东西。&lt;/p&gt;
+&lt;p&gt;题目是XCTF的攻防世界的base64stego这道题，由这道题虽然是伪加密+base64加密一起.&lt;/p&gt;
+&lt;p&gt;一般的zip文件有三个部</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

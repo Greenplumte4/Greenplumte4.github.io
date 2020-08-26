@@ -45,116 +45,6 @@
   </entry>
   
   <entry>
-    <title>buu misc 刷题第二弹</title>
-    <link href="https://greenplumte4.github.io/2020/08/18/buu-misc-shua-ti-di-er-dan/"/>
-    <id>https://greenplumte4.github.io/2020/08/18/buu-misc-shua-ti-di-er-dan/</id>
-    <published>2020-08-18T04:21:55.000Z</published>
-    <updated>2020-08-19T16:16:11.743Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;刷新过的图片&quot;&gt;&lt;a href=&quot;#刷新过的图片&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="CTF-MISC" scheme="https://greenplumte4.github.io/categories/CTF-MISC/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>流量分析总结</title>
-    <link href="https://greenplumte4.github.io/2020/08/17/liu-liang-fen-xi-zong-jie/"/>
-    <id>https://greenplumte4.github.io/2020/08/17/liu-liang-fen-xi-zong-jie/</id>
-    <published>2020-08-17T07:50:29.000Z</published>
-    <updated>2020-08-17T12:57:34.232Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;今天又是水博客的一天倒是&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-     </summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/categories/CTF/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BUU刷题第二弹</title>
-    <link href="https://greenplumte4.github.io/2020/08/13/buu-shua-ti-di-er-dan/"/>
-    <id>https://greenplumte4.github.io/2020/08/13/buu-shua-ti-di-er-dan/</id>
-    <published>2020-08-13T05:14:54.000Z</published>
-    <updated>2020-08-14T10:04:04.919Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;网鼎杯-2018-Fakebook&quot;&gt;&lt;a href=&quot;#网鼎杯-2018-Fakebook&quot; class=&quot;headerlink&quot; title=&quot;[网鼎杯 2018]Fakebook&quot;&gt;&lt;/a&gt;[网鼎杯 2018]Fakebook&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="CTF-WEB" scheme="https://greenplumte4.github.io/categories/CTF-WEB/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ctf-web源码泄露方式总结</title>
-    <link href="https://greenplumte4.github.io/2020/08/03/ctf-web-yuan-ma-xie-lu-fang-shi-zong-jie/"/>
-    <id>https://greenplumte4.github.io/2020/08/03/ctf-web-yuan-ma-xie-lu-fang-shi-zong-jie/</id>
-    <published>2020-08-03T02:26:37.000Z</published>
-    <updated>2020-08-13T04:21:07.193Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
-        
-      
-    
-    
-    
-    <category term="CTF-WEB" scheme="https://greenplumte4.github.io/categories/CTF-WEB/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>buuoj刷题大作战</title>
     <link href="https://greenplumte4.github.io/2020/07/27/buuoj-gxyctf2019-ping-ping-ping/"/>
     <id>https://greenplumte4.github.io/2020/07/27/buuoj-gxyctf2019-ping-ping-ping/</id>
@@ -550,6 +440,98 @@ apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
     
     
     <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UBUNTU搭Django</title>
+    <link href="https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/"/>
+    <id>https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/</id>
+    <published>2019-10-09T14:11:03.000Z</published>
+    <updated>2019-10-10T07:48:39.446Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;云服务器Ubuntu系统上搭Django&quot;&gt;&lt;a href=&quot;#云服务器Ubuntu系统上搭Django&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【write up】buuoj 之 随便注（2019强网杯复现）引入堆叠注入</title>
+    <link href="https://greenplumte4.github.io/2019/09/27/write-up-buuoj-zhi-sui-bian-zhu-2019-qiang-wang-bei-fu-xian-yin-ru-dui-die-zhu-ru/"/>
+    <id>https://greenplumte4.github.io/2019/09/27/write-up-buuoj-zhi-sui-bian-zhu-2019-qiang-wang-bei-fu-xian-yin-ru-dui-die-zhu-ru/</id>
+    <published>2019-09-27T04:53:56.000Z</published>
+    <updated>2020-08-14T10:03:52.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近觉得自己还是要搞定强网杯的随便注这道题（太难了…数字经济上还有魔改题）&lt;/p&gt;
+&lt;h2 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h2&gt;&lt;p&gt;知道有个东西叫 SQL的堆叠注入&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="CTF-WEB" scheme="https://greenplumte4.github.io/categories/CTF-WEB/"/>
+    
+    
+    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XCTF中一道misc题让我明白伪加密修改</title>
+    <link href="https://greenplumte4.github.io/2019/08/31/xctf-zhong-yi-dao-misc-ti-rang-wo-ming-bai-wei-jia-mi-xiu-gai/"/>
+    <id>https://greenplumte4.github.io/2019/08/31/xctf-zhong-yi-dao-misc-ti-rang-wo-ming-bai-wei-jia-mi-xiu-gai/</id>
+    <published>2019-08-31T02:05:44.000Z</published>
+    <updated>2019-08-31T04:54:53.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;XCTF中的zip文件的伪加密实在是让我遇到了很多次，这次决定趁着这次机会还是要好好的搞懂这个遇到了好多次掉坑的东西。&lt;/p&gt;
+&lt;p&gt;题目是XCTF的攻防世界的base64stego这道题，由这道题虽然是伪加密+base64加密一起.&lt;/p&gt;
+&lt;p&gt;一般的zip文件有三个部</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初探腾讯云Linux操作</title>
+    <link href="https://greenplumte4.github.io/2019/08/24/chu-tan-teng-xun-yun-linux-cao-zuo/"/>
+    <id>https://greenplumte4.github.io/2019/08/24/chu-tan-teng-xun-yun-linux-cao-zuo/</id>
+    <published>2019-08-24T11:36:24.000Z</published>
+    <updated>2019-08-24T12:01:08.343Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在腾讯云上的Linux的初探（实验笔记）&quot;&gt;&lt;a href=&quot;#在腾讯云上的Linux的初探（实验笔记）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

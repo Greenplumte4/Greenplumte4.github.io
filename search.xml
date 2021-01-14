@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>RSA学习</title>
+      <link href="/2020/11/23/rsa-xue-xi/"/>
+      <url>/2020/11/23/rsa-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<p>密码学为了做实验，菜鸡不得不好好学了一下RSA，然后被身边的密码学师傅带飞</p><h3 id="RSA加解密实现"><a href="#RSA加解密实现" class="headerlink" title="RSA加解密实现"></a>RSA加解密实现</h3><p>RSA历史：</p><p>非对称加密</p><p>有空补上</p><p>RSA算法的数学基础：</p><p>1.互质</p><p>如果两个或两个以上的正整数的最大公约数是 1，则称它们为<strong>互质</strong></p><p>2.欧拉函数</p><p><strong>欧拉函数</strong> <em>φ(n)<em>是小于或等于</em>n</em>的正整数中与<em>n</em>互质的数的数目。</p><p><strong>推导欧拉函数:</strong></p><p>（1）如果<em>n = 1</em>, <em>φ(1) = 1</em>；(小于等于1的正整数中唯一和1互质的数就是1本身)；</p><p>（2）如果<em>n</em>为质数，<em>φ(n) = n - 1</em>；因为质数和每一个比它小的数字都互质。比如5，比它小的正整数1,2,3,4都和他互质；</p><p>(3) 如果<em>n</em>是<em>a</em>的<em>k</em>次幂，则 *φ(n) = φ(a^k) = a^k - a^(k-1) = (a-1)a^(k-1)*；</p><p>(4) 若<em>m</em>,<em>n</em>互质，则φ(m*n) = φ(m)φ(n)</p><p><strong>模反元素</strong></p><p>如果两个正整数a和n互质，那么一定可以找到整数<em>b</em>，使得 ab-1 被n整除，或者说ab被n除的余数是1。</p><p><strong>欧拉定理</strong></p><p>如果两个正整数<em>a</em>和<em>n</em>互质，则<em>n</em>的欧拉函数 <em>φ(n)</em> 可以让下面的等式成立：<br><em>a^φ(n) = 1(mod n)</em><br>由此可得：<em>a</em>的<em>φ(n - 1)<em>次方肯定是</em>a</em>关于<em>n</em>的模反元素。</p><p><strong>费马小定理</strong></p><p>假设正整数a与质数p互质，因为质数p的<em>φ(p)<em>等于</em>p-1</em>，则欧拉定理可以写成<br><em>a^(p-1) = 1 (mod p)</em><br>这其实是欧拉定理的一个特例。</p><p>RSA算法的过程：</p><p>1.寻找2个不同的质数p和q（随机寻找）</p><p>2.计算p和q的乘积n</p><p>3.计算欧拉函数φ(n) </p><p>φ(n) = (p-1)(q-1)</p><p>4.随机选择一个小于φ(n)并且与φ(n) 互质的整数e</p><p>5.计算e对于φ(n)的模反元素d</p><p>6.将n和e封装成公钥，n和d封装成私钥</p><p>总结：计算n，e，d的过程</p><h3 id="RSA代码实现"><a href="#RSA代码实现" class="headerlink" title="RSA代码实现"></a>RSA代码实现</h3><p>1.首先是随机寻找两个不同的质数：</p><h3 id="CTF中一些RSA攻击总结"><a href="#CTF中一些RSA攻击总结" class="headerlink" title="CTF中一些RSA攻击总结"></a>CTF中一些RSA攻击总结</h3><p>引用：</p><p><a href="https://zhuanlan.zhihu.com/p/33580225">https://zhuanlan.zhihu.com/p/33580225</a></p><p><a href="https://www.cnblogs.com/jcchan/p/8412819.html">https://www.cnblogs.com/jcchan/p/8412819.html</a></p><p><a href="https://zhuanlan.zhihu.com/p/84013522">https://zhuanlan.zhihu.com/p/84013522</a></p><p><a href="https://blog.csdn.net/chroje/article/details/79477329?utm_source=blogkpcl1">https://blog.csdn.net/chroje/article/details/79477329?utm_source=blogkpcl1</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>向量与矩阵</title>
+      <link href="/2020/10/23/xiang-liang-yu-ju-zhen/"/>
+      <url>/2020/10/23/xiang-liang-yu-ju-zhen/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[CISCN2019 华北赛区 Day1 Web2]ikun</title>
+      <link href="/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/"/>
+      <url>/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>强网杯2020Writeup</title>
       <link href="/2020/08/26/qiang-wang-bei-2020/"/>
       <url>/2020/08/26/qiang-wang-bei-2020/</url>

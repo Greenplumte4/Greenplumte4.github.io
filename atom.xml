@@ -6,7 +6,7 @@
   <link href="https://greenplumte4.github.io/atom.xml" rel="self"/>
   
   <link href="https://greenplumte4.github.io/"/>
-  <updated>2020-11-23T16:04:00.562Z</updated>
+  <updated>2021-01-14T11:35:25.370Z</updated>
   <id>https://greenplumte4.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PAT甲级1008</title>
+    <link href="https://greenplumte4.github.io/2021/01/14/pat-jia-ji-1008/"/>
+    <id>https://greenplumte4.github.io/2021/01/14/pat-jia-ji-1008/</id>
+    <published>2021-01-14T08:10:43.000Z</published>
+    <updated>2021-01-14T11:35:25.370Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1008-Elevator-20分&quot;&gt;&lt;a href=&quot;#1008-Elevator-20分&quot; class=&quot;headerlink&quot; title=&quot;1008 Elevator (20分)&quot;&gt;&lt;/a&gt;1008 Elevator (20分)&lt;/h2&gt;&lt;p&gt;The</summary>
+        
+      
+    
+    
+    
+    <category term="PAT" scheme="https://greenplumte4.github.io/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="https://greenplumte4.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask框架开发</title>
+    <link href="https://greenplumte4.github.io/2021/01/01/flask-kuang-jia-kai-fa/"/>
+    <id>https://greenplumte4.github.io/2021/01/01/flask-kuang-jia-kai-fa/</id>
+    <published>2021-01-01T05:49:00.000Z</published>
+    <updated>2021-01-14T11:35:12.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;python基础&quot;&gt;&lt;a href=&quot;#python基础&quot; class=&quot;headerlink&quot; title=&quot;python基础&quot;&gt;&lt;/a&gt;python基础&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;1.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;flask路由注册：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Python开发" scheme="https://greenplumte4.github.io/categories/Python%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Python开发" scheme="https://greenplumte4.github.io/tags/Python%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>RSA学习</title>
@@ -60,6 +111,34 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>文件系统与文件存储</title>
+    <link href="https://greenplumte4.github.io/2020/09/12/wen-jian-xi-tong-yu-wen-jian-cun-chu/"/>
+    <id>https://greenplumte4.github.io/2020/09/12/wen-jian-xi-tong-yu-wen-jian-cun-chu/</id>
+    <published>2020-09-12T00:53:03.000Z</published>
+    <updated>2021-01-14T11:35:36.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近在看书，就当写读书笔记了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一、常见磁盘分区格式&quot;&gt;&lt;a href=&quot;#一、常见磁盘分区格式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="MISC" scheme="https://greenplumte4.github.io/categories/MISC/"/>
+    
+    
+    <category term="MISC" scheme="https://greenplumte4.github.io/tags/MISC/"/>
     
   </entry>
   
@@ -468,73 +547,6 @@ apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
     
     
     <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>攻防世界的几道小题</title>
-    <link href="https://greenplumte4.github.io/2019/10/15/gong-fang-shi-jie-de-ji-dao-xiao-ti/"/>
-    <id>https://greenplumte4.github.io/2019/10/15/gong-fang-shi-jie-de-ji-dao-xiao-ti/</id>
-    <published>2019-10-14T23:24:44.000Z</published>
-    <updated>2019-10-31T00:36:53.112Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【write-up】攻防世界的几道小题&quot;&gt;&lt;a href=&quot;#【write-up】攻防世界的几道小题&quot; class=&quot;headerlink&quot; title=&quot;【write up】攻防世界的几道小题&quot;&gt;&lt;/a&gt;【write</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【write up】攻防世界-Web-ics-05</title>
-    <link href="https://greenplumte4.github.io/2019/10/11/write-up-gong-fang-shi-jie-web-ics-05/"/>
-    <id>https://greenplumte4.github.io/2019/10/11/write-up-gong-fang-shi-jie-web-ics-05/</id>
-    <published>2019-10-11T01:09:58.000Z</published>
-    <updated>2020-08-14T10:04:46.951Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【write-up】攻防世界-Web-ics-05&quot;&gt;&lt;a href=&quot;#【write-up】攻防世界-Web-ics-05&quot; class=&quot;headerlink&quot; title=&quot;【write up】攻防世界-Web-ics-05&quot;&gt;&lt;/a&gt;【write</summary>
-        
-      
-    
-    
-    
-    <category term="CTF-WEB" scheme="https://greenplumte4.github.io/categories/CTF-WEB/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UBUNTU搭Django</title>
-    <link href="https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/"/>
-    <id>https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/</id>
-    <published>2019-10-09T14:11:03.000Z</published>
-    <updated>2019-10-10T07:48:39.446Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;云服务器Ubuntu系统上搭Django&quot;&gt;&lt;a href=&quot;#云服务器Ubuntu系统上搭Django&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://greenplumte4.github.io/atom.xml" rel="self"/>
   
   <link href="https://greenplumte4.github.io/"/>
-  <updated>2021-01-14T11:35:25.370Z</updated>
+  <updated>2021-01-14T11:49:19.673Z</updated>
   <id>https://greenplumte4.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo发布文章报错can not read a block mapping entry</title>
+    <link href="https://greenplumte4.github.io/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/"/>
+    <id>https://greenplumte4.github.io/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/</id>
+    <published>2021-01-14T11:44:11.000Z</published>
+    <updated>2021-01-14T11:49:19.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前有几篇文章没有传上去&lt;/p&gt;
+&lt;p&gt;然后没有注意报错，这次想彻底的改变自己的一些懒散的性格23333&lt;/p&gt;
+&lt;p&gt;踩坑如下：&lt;/p&gt;
+&lt;p&gt;之前的文章的tag以及category没有在冒号之后加空格进行了报错&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title:</summary>
+        
+      
+    
+    
+    
+    <category term="亿点小细节" scheme="https://greenplumte4.github.io/categories/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+    
+    
+    <category term="亿点小细节" scheme="https://greenplumte4.github.io/tags/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+    
+  </entry>
   
   <entry>
     <title>PAT甲级1008</title>
@@ -519,31 +548,6 @@ apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
     
     
     <category term="CTF-MISC" scheme="https://greenplumte4.github.io/categories/CTF-MISC/"/>
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>作业题wp</title>
-    <link href="https://greenplumte4.github.io/2019/11/02/zuo-ye-ti-wp/"/>
-    <id>https://greenplumte4.github.io/2019/11/02/zuo-ye-ti-wp/</id>
-    <published>2019-11-02T15:45:20.000Z</published>
-    <updated>2020-08-14T10:04:40.747Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;最后一次作业wp&quot;&gt;&lt;a href=&quot;#最后一次作业wp&quot; class=&quot;headerlink&quot; title=&quot;最后一次作业wp&quot;&gt;&lt;/a&gt;最后一次作业wp&lt;/h1&gt;&lt;h2 id=&quot;WEB&quot;&gt;&lt;a href=&quot;#WEB&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://greenplumte4.github.io/categories/CTF/"/>
     
     
     <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>

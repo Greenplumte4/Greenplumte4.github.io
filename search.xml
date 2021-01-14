@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>使用hexo发布文章报错can not read a block mapping entry</title>
+      <link href="/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/"/>
+      <url>/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/</url>
+      
+        <content type="html"><![CDATA[<p>之前有几篇文章没有传上去</p><p>然后没有注意报错，这次想彻底的改变自己的一些懒散的性格23333</p><p>踩坑如下：</p><p>之前的文章的tag以及category没有在冒号之后加空格进行了报错</p><pre><code>title: 使用hexo发布文章报错can not read a block mapping entrytop: falsetags:亿点小细节categories:亿点小细节</code></pre><blockquote><p> can not read a block mapping entry; a multiline key may not be an implicit key at line X, column X</p></blockquote><p>后面添加空格之后即可解决</p><p>当然还有师傅的也是有报错</p><p>有可能是文件名里面出现了英文字符的双引号，导致yaml语法解析出错，将英文双引号修改成中文双引号即可修复</p><p>今日份踩坑2333</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 亿点小细节 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 亿点小细节 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PAT甲级1008</title>
       <link href="/2021/01/14/pat-jia-ji-1008/"/>
       <url>/2021/01/14/pat-jia-ji-1008/</url>

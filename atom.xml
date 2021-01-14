@@ -119,31 +119,6 @@
   </entry>
   
   <entry>
-    <title>[CISCN2019 华北赛区 Day1 Web2]ikun</title>
-    <link href="https://greenplumte4.github.io/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/"/>
-    <id>https://greenplumte4.github.io/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/</id>
-    <published>2020-10-20T15:54:27.000Z</published>
-    <updated>2020-10-20T15:54:27.027Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>文件系统与文件存储</title>
     <link href="https://greenplumte4.github.io/2020/09/12/wen-jian-xi-tong-yu-wen-jian-cun-chu/"/>
     <id>https://greenplumte4.github.io/2020/09/12/wen-jian-xi-tong-yu-wen-jian-cun-chu/</id>
@@ -548,6 +523,31 @@ apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
     
     
     <category term="CTF-MISC" scheme="https://greenplumte4.github.io/categories/CTF-MISC/"/>
+    
+    
+    <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作业题wp</title>
+    <link href="https://greenplumte4.github.io/2019/11/02/zuo-ye-ti-wp/"/>
+    <id>https://greenplumte4.github.io/2019/11/02/zuo-ye-ti-wp/</id>
+    <published>2019-11-02T15:45:20.000Z</published>
+    <updated>2020-08-14T10:04:40.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;最后一次作业wp&quot;&gt;&lt;a href=&quot;#最后一次作业wp&quot; class=&quot;headerlink&quot; title=&quot;最后一次作业wp&quot;&gt;&lt;/a&gt;最后一次作业wp&lt;/h1&gt;&lt;h2 id=&quot;WEB&quot;&gt;&lt;a href=&quot;#WEB&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://greenplumte4.github.io/categories/CTF/"/>
     
     
     <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>

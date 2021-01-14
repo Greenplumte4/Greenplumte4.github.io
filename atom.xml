@@ -39,31 +39,6 @@
   </entry>
   
   <entry>
-    <title>向量与矩阵</title>
-    <link href="https://greenplumte4.github.io/2020/10/23/xiang-liang-yu-ju-zhen/"/>
-    <id>https://greenplumte4.github.io/2020/10/23/xiang-liang-yu-ju-zhen/</id>
-    <published>2020-10-22T16:02:33.000Z</published>
-    <updated>2020-12-25T12:10:25.591Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>[CISCN2019 华北赛区 Day1 Web2]ikun</title>
     <link href="https://greenplumte4.github.io/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/"/>
     <id>https://greenplumte4.github.io/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/</id>
@@ -539,6 +514,27 @@ apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;
     
     
     <category term="CTF" scheme="https://greenplumte4.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UBUNTU搭Django</title>
+    <link href="https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/"/>
+    <id>https://greenplumte4.github.io/2019/10/09/ubuntu-da-django/</id>
+    <published>2019-10-09T14:11:03.000Z</published>
+    <updated>2019-10-10T07:48:39.446Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;云服务器Ubuntu系统上搭Django&quot;&gt;&lt;a href=&quot;#云服务器Ubuntu系统上搭Django&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

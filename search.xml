@@ -17,19 +17,6 @@
     
     
     <entry>
-      <title>向量与矩阵</title>
-      <link href="/2020/10/23/xiang-liang-yu-ju-zhen/"/>
-      <url>/2020/10/23/xiang-liang-yu-ju-zhen/</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[CISCN2019 华北赛区 Day1 Web2]ikun</title>
       <link href="/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/"/>
       <url>/2020/10/20/ciscn2019-hua-bei-sai-qu-day1-web2-ikun/</url>
